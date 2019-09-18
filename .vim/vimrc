@@ -38,7 +38,14 @@ set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set autoindent
 filetype plugin indent on
+
+
+"Keybinds
+map <f9> :MakeJob
+inoremap jk <esc>
+inoremap kj <esc>
 
 "nerdTREE
 map <C-N> :NERDTreeToggle<CR>
@@ -51,3 +58,53 @@ nmap <leader>b :Buffers<cr>
 nmap <leader>f :Files<cr>
 " Find files by name under the home directory
  nmap <leader>h :Files ~/<cr>
+
+"STATUSBAR
+set laststatus=2
+
+"curren mode
+let g:currentmode={
+    \ 'n'  : 'Normal',
+    \ 'no' : 'Normal·Operator Pending',
+    \ 'v'  : 'Visual',
+    \ 'V'  : 'V·Line',
+    \ '^V' : 'V·Block',
+    \ 's'  : 'Select',
+    \ 'S'  : 'S·Line',
+    \ '^S' : 'S·Block',
+    \ 'i'  : 'Insert',
+    \ 'R'  : 'Replace',
+    \ 'Rv' : 'V·Replace',
+    \ 'c'  : 'Command',
+    \ 'cv' : 'Vim Ex',
+    \ 'ce' : 'Ex',
+    \ 'r'  : 'Prompt',
+    \ 'rm' : 'More',
+    \ 'r?' : 'Confirm',
+    \ '!'  : 'Shell',
+    \ 't'  : 'Terminal'
+    \}
+
+
+set statusline=
+set statusline+=%0*\ %n\                                 " Buffer number
+set statusline+=%3*│                                     " Separator
+set statusline+=%0*\ %{toupper(g:currentmode[mode()])}\  " The current mode
+set statusline+=%3*                                     " Separator
+set statusline+=\ %f                                     " Show file path
+set statusline+=\ (%{&ff})                                 " FileFormat (dos/unix..)
+set statusline+=%=                                       " Right Side
+set statusline+=%2*\ %02v\                           " Colomn number
+set statusline+=%3*│                                     " Separator
+set statusline+=%1*\ %02l/%L\%3p%%\                  " Line number / total lines, percentage of document
+set statusline+=%3*│                                     " Separator
+"set statusline+=%2*\ %{''.(&fenc!=''?&fenc:&enc).''}    " Encoding
+set statusline+=%2*\ %Y\                                 " FileType
+"set statusline+=(%{&ff})                                " FileFormat (dos/unix..)
+set statusline+=%r                                       "read only flag
+set statusline+=%m                                       "modified flag
+
+
+"hi User1 ctermbg=007 ctermfg=red   guibg=#4e4e4e guifg=red
+"hi User2 ctermbg=red   ctermfg=blue  guibg=red   guifg=blue
+"hi User3 ctermbg=blue  ctermfg=green guibg=blue  guifg=green
