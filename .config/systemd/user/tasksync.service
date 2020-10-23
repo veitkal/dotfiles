@@ -1,0 +1,10 @@
+[Unit]
+Description=Sync taskwarrior 
+After=network.target[Service]
+
+[Service]
+Type=oneshot
+ExecStart=task sync
+
+[Install]
+WantedBy=default.target

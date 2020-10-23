@@ -1,0 +1,10 @@
+[Unit]
+Description=Sync joplin
+After=network.target[Service]
+
+[Service]
+Type=oneshot
+ExecStart=joplin sync
+
+[Install]
+WantedBy=default.target

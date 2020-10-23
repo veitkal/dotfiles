@@ -1,0 +1,9 @@
+[Unit]
+Description=Sync joplin
+
+[Timer]
+OnBootSec=15min
+OnCalendar=*-*-* *:00:00
+
+[Install]
+WantedBy=timers.target

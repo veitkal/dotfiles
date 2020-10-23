@@ -1,0 +1,14 @@
+out_to_x false
+out_to_console true
+update_interval 2.0
+total_run_times 0
+use_spacer none
+TEXT
+Vol: ${exec amixer -c 1 -M -D pulse get Master | grep -m 1 -o -E [[:digit:]]+% | tr -d "%"} | Batt:${battery_short} | Wifi: ${wireless_link_qual_perc wlo1}% | Temp: ${acpitemp}C | Ram:$memperc% | Cpu:${cpu}% 
+
+#| ${time %a %m/%d/%y}  ${time %H:%M}
+
+#${exec setxkbmap -print | awk -F"+" '/xkb_symbols/ {print $2}'
+
+
+#WIFI: {wireless_essid wlp4s0} 
