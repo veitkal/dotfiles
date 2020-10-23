@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/mnt/data/mega/dev/web/wyrdSite/drafts/draft01/scripts'
+let g:netrw_dirhist_2='/mnt/data/mega/dev/web/wyrdSite/drafts/draft01'
+let g:netrw_dirhist_1='/mnt/data/mega/dev/web/wyrdSite/drafts'
+let g:netrw_dirhist_0='/mnt/data/mega/dev/web/wyrdSite'
+let g:netrw_dirhist_9='/mnt/data/mega/dev/web/wyrdSite/css'
+let g:netrw_dirhist_8='/mnt/data/mega/dev/web/wyrdSite/drafts/draft04'
+let g:netrw_dirhist_7='/mnt/data/mega/dev/web/wyrdSite/drafts/draft04/scripts'
+let g:netrw_dirhist_6='/home/hhuh/bin/of_v20200729_linux64gcc6_release'
+let g:netrw_dirhist_5='/home/hhuh/bin'
+let g:netrw_dirhist_4='/home/hhuh/bin/of_v202003'
