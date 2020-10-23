@@ -170,7 +170,6 @@ alias sxlock="sxlock -f "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*""
 # alias ifconfig="ip route get 1.2.3.4 | awk '{print $7}'"
 
 #dotfiles
-config config --local status.showUntrackedFiles no
 alias dotconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #vim
